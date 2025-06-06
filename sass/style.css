@@ -490,6 +490,7 @@ textarea {
   background-color: #e8e8e8;
   font-size: 14px;
   color: rgb(87, 87, 87);
+  direction: rtl;
 }
 
 .para-about-trafic {

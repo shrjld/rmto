@@ -17,8 +17,10 @@
     font-size: 14px;
 }
 
+
 .crumb-item:hover {
     color:orange;
+    
 }
 
 // ------------- breadcrumb end----------------
@@ -27,6 +29,7 @@
     background-color: #e8e8e8;
     font-size:14px;
     color: rgb(87, 87, 87);
+    direction: rtl;
 }
 
 .para-about-trafic {
@@ -63,6 +66,8 @@
     padding: 5px 20px;
     border-radius:7px;
     color: #e8e8e8;
+    
+  
 
 }
 
