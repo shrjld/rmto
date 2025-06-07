@@ -470,7 +470,7 @@ textarea {
    ========================================================================== */
 * {
   direction: rtl;
-  font-family: vazirmatn;
+  font-family: vazirmatn fd;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
