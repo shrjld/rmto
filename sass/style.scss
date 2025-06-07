@@ -8,6 +8,55 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+// =========================== toggler-icon ========================//
+.navbar-toggler-icon {
+    background-image: none !important;
+    position: relative;
+    width: 24px;
+    height: 2px;
+    background-color: rgb(30, 19, 60);
+    display: inline-block;
+    transition: none;
+    margin: 6px 0;
+
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: rgb(30, 19, 60);
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    top: 8px;
+}
+
+.navbar-toggler {
+    border: none !important;
+    background: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 10px 20px
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon,
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before,
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    opacity: 0;
+}
+
+// ======================== end-toggler-icon ========================//
+
 // --------------breadcrumb-----------------
 .crumb {
     background-color: #f2f3f5;
@@ -19,15 +68,15 @@
 
 
 .crumb-item:hover {
-    color:orange;
-    
+    color: orange;
+
 }
 
 // ------------- breadcrumb end----------------
 // ------------------traffic-------------------
 .body-info {
     background-color: #e8e8e8;
-    font-size:14px;
+    font-size: 14px;
     color: rgb(87, 87, 87);
     direction: rtl;
 }
@@ -48,32 +97,34 @@
 
 
 .traffic-icons:hover {
-    background-color:orange;
-    border-radius:7px;
+    background-color: orange;
+    border-radius: 7px;
 }
 
 .rmtolink {
-    color:rgb(99, 147, 209);
+    color: rgb(99, 147, 209);
 
 }
+
 .rmtolink:hover {
-    color:orange;
+    color: orange;
 }
 
 .print {
     border: none;
     background-color: rgb(0, 65, 123);
     padding: 5px 20px;
-    border-radius:7px;
+    border-radius: 7px;
     color: #e8e8e8;
-    
-  
+
+
 
 }
 
 .print:hover {
-    background-color:orange;
+    background-color: orange;
 }
+
 // ------------------------traffic-----------------------
 
 
