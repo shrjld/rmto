@@ -3,7 +3,7 @@
 
 * {
     direction: rtl;
-    font-family: vazirmatn fd;
+    font-family: vazirmatn;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -88,14 +88,16 @@
 // ----------------------------footer-------------------------------------------------
 
 footer {
+<<<<<<< HEAD
     background-color: #03203e ;
+=======
+    background-color: $footer-backgrouhnd-color ;
+>>>>>>> 9698d93253e025b78dcbbcaf673b038340235aa5
 
 
 }
 
 div .footer-container {
-
-
     width: 100%;
 }
 
