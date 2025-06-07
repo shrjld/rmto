@@ -20,6 +20,7 @@
  * 3. Configurable defaults
  */
 html {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: sans-serif;
   /* 1 */
@@ -45,6 +46,7 @@ body {
  * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
 *, *:before, *:after {
+  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -121,8 +123,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -211,6 +212,7 @@ figure {
  * 2. Correct `overflow` set to `hidden` in IE 8/9/10/11 and Edge 12.
  */
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -287,28 +289,15 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-
-
-
-
-
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  appearance: button;
+html input[type=button],
+input[type=reset],
+input[type=submit] {
   -webkit-appearance: button;
+  /* 2 */
   cursor: pointer;
+  /* 3 */
 }
-
-
-
-
-
-
-
-
-
 
 /*
  * Re-set default cursor for disabled elements.
@@ -356,13 +345,9 @@ input[type=number]::-webkit-outer-spin-button {
 /*
  * Address `appearance` set to `searchfield` in Safari and Chrome.
  */
- 
-
-input[type="search"] {
-  appearance: textfield;
+input[type=search] {
   -webkit-appearance: textfield;
 }
-
 
 /*
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
@@ -485,12 +470,159 @@ textarea {
    ========================================================================== */
 * {
   direction: rtl;
-  font-family: vazirmatn fd;
+  font-family: vazirmatn;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+.navbar-toggler-icon {
+  background-image: none !important;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: rgb(30, 19, 60);
+  display: inline-block;
+  transition: none;
+  margin: 6px 0;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: rgb(30, 19, 60);
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  top: 8px;
+}
+
+.navbar-toggler {
+  border: none !important;
+  background: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 10px 20px;
+}
+
+.navbar-toggler[aria-expanded=true] .navbar-toggler-icon,
+.navbar-toggler[aria-expanded=true] .navbar-toggler-icon::before,
+.navbar-toggler[aria-expanded=true] .navbar-toggler-icon::after {
+  opacity: 0;
+}
+
+.navbar {
+  padding: 0%;
+}
+
+#nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 998;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+#nav-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+.navbar-collapse {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(205, 210, 215);
+  margin-top: 0%;
+}
+
+.nav-item {
+  border-left: 2px solid #0d3291;
+}
+
+.navbar {
+  position: relative;
+  z-index: 2;
+}
+
+.nav-link-b,
+.nav-link-s {
+  text-decoration: none;
+  color: #0d3291;
+  font-size: 14px;
+  font-weight: 900;
+  margin-right: 10px;
+  cursor: pointer;
+  text-align: right;
+  padding: 5px 3px 5px 4px;
+}
+
+.nav-link-b:hover,
+.nav-link-s:hover {
+  color: #fd7e2a;
+}
+
+@media (max-width: 1100px) {
+  .nav-link-b,
+  .nav-link-s {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+@media (max-width: 1000px) {
+  .navbar-collapse {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(171, 171, 171);
+    text-decoration: none;
+    height: 85vh;
+  }
+  .nav-item {
+    height: 5vh;
+    border-left: none;
+    border-bottom: 1px solid #000000;
+  }
+  .nav-link-s,
+  .nav-link-b {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: #333;
+    text-align: right;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .nav-link-b:hover,
+  .nav-link-s:hover {
+    color: #191919;
+  }
+  .nav-item:hover {
+    background-color: #d7d7d7;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
 .crumb {
   background-color: #f2f3f5;
   height: 50px;
@@ -547,4 +679,118 @@ textarea {
 
 .print:hover {
   background-color: orange;
+}
+
+footer {
+  background-color: #03203e;
+}
+
+div .footer-container {
+  width: 100%;
+}
+
+.footer-link {
+  display: block;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #fd7e2a;
+}
+
+.footer-link,
+.footer-para {
+  color: white;
+  font-size: 14px;
+  letter-spacing: -1px;
+  text-align: justify;
+}
+
+.footer-para {
+  line-height: 13px;
+}
+
+.footer-link {
+  white-space: nowrap;
+}
+
+.email-img {
+  filter: none;
+  mix-blend-mode: normal;
+  opacity: 1;
+}
+
+h6 {
+  color: white;
+}
+
+.footer-section3-h6 {
+  color: white;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: white;
+  opacity: 1;
+}
+
+.footer-section3 {
+  margin-top: 13px;
+}
+
+.footer-section3 > img {
+  height: 230px;
+}
+
+.copyright-para {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  font-weight: normal;
+  padding: 7px;
+  letter-spacing: -1px;
+}
+
+.copyright-para-b {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  font-weight: normal;
+  border-left: 1px solid rgb(68, 65, 65);
+  padding: 7px;
+  letter-spacing: -1px;
+}
+
+.container-copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.after-copyright-logo {
+  border-left: 10px solid rgb(27, 27, 27);
+}
+
+.after-copyright-para {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  font-weight: normal;
+  line-height: 8px;
+}
+
+.after-copyright-link {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  font-weight: normal;
+  text-decoration: none;
+  color: rgb(88, 88, 184);
+}
+
+.after-copyright-link:hover {
+  color: #03203e;
 }/*# sourceMappingURL=style.css.map */
