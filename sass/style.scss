@@ -24,6 +24,14 @@
 }
 
 // ------------- breadcrumb end----------------
+//---------------sideBar-------//
+.listGroup-header{
+    background-color: #f39700 !important;
+    border: none;
+    color: white;
+    
+}
+
 // ------------------traffic-------------------
 .body-info {
     background-color: #e8e8e8;
@@ -80,7 +88,7 @@
 // ----------------------------footer-------------------------------------------------
 
 footer {
-    background-color: $footer-background-color ;
+    background-color: #03203e ;
 
 
 }
@@ -99,7 +107,7 @@ div .footer-container {
 }
 
 .footer-link:hover {
-    color: $footer-link-color;
+    color:#fd7e2a;
 }
 
 .footer-link,
@@ -211,6 +219,6 @@ hr {
 }
 
 .after-copyright-link:hover {
-    color: $footer-link-color;
+    // color: $footer-link-color;
 
 }
