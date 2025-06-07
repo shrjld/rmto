@@ -474,6 +474,10 @@ textarea {
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .navbar-toggler-icon {
   background-image: none !important;
   position: relative;
@@ -637,6 +641,33 @@ textarea {
   background-color: #f39700 !important;
   border: none;
   color: white;
+  padding: 20px;
+}
+
+.listGroup-header:hover {
+  cursor: pointer;
+}
+
+.listGroup-news {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.list-group-item {
+  font-size: 13px;
+}
+
+.Lgroup-item {
+  background-color: #e8e8e8;
+}
+
+.Lgroup-item:hover {
+  color: #f39700;
+  cursor: pointer;
+}
+
+.list-group {
+  margin-bottom: 10px;
 }
 
 .body-info {
