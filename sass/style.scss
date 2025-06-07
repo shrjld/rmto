@@ -362,7 +362,8 @@ hr {
 // -------------------------after copy right------------------------------------
 .after-copyright-logo {
 
-    border-left: 10px solid rgb(27, 27, 27);
+    border-left: 3px solid rgb(27, 27, 27);
+    
 
 }
 
@@ -372,7 +373,16 @@ hr {
     letter-spacing: -1px;
     font-weight: normal;
     line-height: 8px;
+    display: inline;
 
+}
+.after-copyright-para-2{
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    font-weight: normal;
+    line-height: 8px;
+    padding-right: 50px;
 }
 
 .after-copyright-link {
@@ -385,6 +395,6 @@ hr {
 }
 
 .after-copyright-link:hover {
-    // color: $footer-link-color;
+    color: #fd7e2a;;
 
 }
