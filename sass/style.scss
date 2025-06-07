@@ -75,3 +75,142 @@
     background-color:orange;
 }
 // ------------------------traffic-----------------------
+
+
+// ----------------------------footer-------------------------------------------------
+
+footer {
+    background-color: $footer-background-color ;
+
+
+}
+
+div .footer-container {
+
+
+    width: 100%;
+}
+
+
+.footer-link {
+    display: block;
+    text-decoration: none;
+
+}
+
+.footer-link:hover {
+    color: $footer-link-color;
+}
+
+.footer-link,
+.footer-para {
+    color: white;
+    font-size: 14px;
+    letter-spacing: -1px;
+    text-align: justify;
+}
+
+.footer-para {
+    line-height: 13px;
+}
+
+.footer-link {
+
+    white-space: nowrap;
+}
+
+.email-img {
+    filter: none;
+    mix-blend-mode: normal;
+    opacity: 1;
+}
+
+h6 {
+    color: white;
+}
+
+.footer-section3-h6 {
+    color: white;
+}
+
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: white;
+    opacity: 1;
+}
+
+.footer-section3 {
+    margin-top: 13px;
+
+
+}
+
+.footer-section3>img {
+    height: 230px;
+
+}
+
+
+
+// -----------{--------------------------copy right-------------------------------// // }
+.copyright-para {
+
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    font-weight: normal;
+    padding: 7px;
+    letter-spacing: -1px;
+
+}
+
+.copyright-para-b {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    font-weight: normal;
+    border-left: 1px solid rgb(68, 65, 65);
+    padding: 7px;
+    letter-spacing: -1px;
+
+}
+
+.container-copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+// -------------------------after copy right------------------------------------
+.after-copyright-logo {
+
+    border-left: 10px solid rgb(27, 27, 27);
+
+}
+
+.after-copyright-para {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    font-weight: normal;
+    line-height: 8px;
+
+}
+
+.after-copyright-link {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    font-weight: normal;
+    text-decoration: none;
+    color: rgb(88, 88, 184);
+}
+
+.after-copyright-link:hover {
+    color: $footer-link-color;
+
+}
